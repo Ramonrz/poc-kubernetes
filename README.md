@@ -16,6 +16,6 @@
     - Sonar - ConfigMap
     - PostgreSQL - ConfigMap
 
-## Images
+# Images
 - sonarqube:7.7-community
 - postgres:10
