@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sonar-db-pod
+  labels:
+    app: sonar-db-service
+spec:
+  containers:
+    - name: sonar-db-pod-container
+      image: postgres:10
+      ports:
+        - containerPort: 5432
+      envFrom:
+        - configMapRef:
+            name: sonar-db-configmap

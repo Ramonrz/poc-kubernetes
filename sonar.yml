@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sonar-pod
+  labels:
+    app: sonar-svc
+spec:
+  containers:
+    - name: sonar-pod-container
+      image: sonarqube:7.7-community
+      ports:
+        - containerPort: 9000
+      envFrom:
+        - configMapRef:
+            name: sonar-configmap

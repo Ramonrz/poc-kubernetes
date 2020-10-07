@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sonar-db-configmap
+data:
+  POSTGRES_PASSWORD: sonar
+  POSTGRES_USER: sonar
