@@ -2,7 +2,7 @@
 
 ![Alt text](svg/kubernetes.svg)
 
-> Proof of Concept to demonstrate the basic use of the Kubernetes.
+> Proof of Concept to demonstrate the basic use Kubernetes.
 
 > This project uses the following structure:
 
