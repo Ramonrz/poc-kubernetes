@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: employee-api-service
+spec:
+  type: NodePort
+  ports:
+    - name: app
+      port: 8080
+      nodePort: 30000
+    - name: health
+      port: 9090
+      nodePort: 30001
+  selector:
+    app: employee-svc

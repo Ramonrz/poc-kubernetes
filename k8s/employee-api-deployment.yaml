@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: employee-api-deployment
+spec:
+  template:
+    metadata:
+      labels:
+        app: employee-svc
+    spec:
+      containers:
+        - name: employee-api-container
+          image: ramonrezende/employee-api:5.0.0
+          ports:
+            - containerPort: 8080
+            - containerPort: 9090
+          envFrom:
+            - configMapRef:
+                name: employee-configmap
+  replicas: 2
+  selector:
+    matchLabels:
+      app: employee-svc

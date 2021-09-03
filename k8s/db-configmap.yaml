@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-configmap
+data:
+  MYSQL_DATABASE: employee
+  MYSQL_ROOT_PASSWORD: 0800fc577294c34e0b28ad2839435945

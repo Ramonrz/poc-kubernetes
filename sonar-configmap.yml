@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: sonar-configmap
-data:
-  SONARQUBE_JDBC_URL: jdbc:postgresql://sonar-db-service:5432/sonar
-  SONARQUBE_JDBC_PASSWORD: sonar
