@@ -6,6 +6,8 @@
 
 > This project uses the following structure:
 
+- Liveness/Readiness Probe
+    - SpringBoot App - Probe
 - Deployments/ReplicaSets
     - Mysql - 1 rs
     - SpringBoot App - 2 rs
