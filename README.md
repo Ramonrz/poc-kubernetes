@@ -6,6 +6,8 @@
 
 > This project uses the following structure:
 
+- Hpa
+    - SpringBoot App - minReplicas 2, maxReplicas 10
 - Liveness/Readiness Probe
     - SpringBoot App - Probe
 - Deployments/ReplicaSets
