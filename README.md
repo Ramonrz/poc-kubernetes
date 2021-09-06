@@ -6,16 +6,18 @@
 
 > This project uses the following structure:
 
-- Pods
-    - Sonar
-    - PostgreSQL
+- Deployments/ReplicaSets
+    - Mysql - 1 rs
+    - SpringBoot App - 2 rs
 - Services
-    - Sonar - NodePort
-    - PostgreSQL - ClusterIP
+    - Mysql - ClusterIP
+    - SpringBoot App - NodePort
 - ConfigMap
-    - Sonar - ConfigMap
-    - PostgreSQL - ConfigMap
+    - Mysql - ConfigMap
+    - SpringBoot App - ConfigMap
+- PersistentVolumeClaim
+    - Mysql - PVC
 
 # Images
-- sonarqube:7.7-community
-- postgres:10
+- mysql:8
+- ramonrezende/employee-api:5.0.0
