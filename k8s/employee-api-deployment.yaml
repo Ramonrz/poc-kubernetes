@@ -17,6 +17,22 @@ spec:
           envFrom:
             - configMapRef:
                 name: employee-configmap
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 9090
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            timeoutSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 9090
+            initialDelaySeconds: 60
+            periodSeconds: 40
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 2
   replicas: 2
   selector:
     matchLabels:
